@@ -62,7 +62,12 @@ function upDateClock() {
     else if (format == "us") {
         dateTime = new Date();
 
-        hours = dateTime.getHours() - 12;
+        if (hours > 12) {
+            hours = dateTime.getHours() - 12;
+        }
+        else {
+            hours = dateTime.getHours()
+        }
         minutes = dateTime.getMinutes();
         seconds = dateTime.getSeconds();
 
